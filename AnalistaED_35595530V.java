@@ -1,16 +1,39 @@
-import java.util.*;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
+/**
+ * Ejercicio práctico examen EVAL 1 ED
+ *
+ * @author EVA ALFARO 35595530V
+ * @version 1.0
+ */
 public class AnalistaED_35595530V {
 
     static final double FACTOR_HORA_EXTRA = 1.2;
     private String nombreCompleto, dni;
     private double salarioBasePorHora = 10.56;
-
+/**
+ * Constructor con tres parámetros
+ * 
+ * @param nombreCompleto nombre completo en mayúsculas
+ * @param dni documento nacional de identidad con letra y sin espacios
+ */
     public AnalistaED_35595530V(String nombreCompleto, String dni) {
         this.nombreCompleto = nombreCompleto;
         this.dni = dni;
     }
-
+/**
+ * Calcula el salario bruto mensual en función del salario base por hora
+ * y las horas extras El precio por hora extra se determina con la 
+ * constante FACTOR_HOR_extrs
+ * 
+ * @param horasExtra número de horas extra dedicadas redondeado a la baja 
+ * (entero)
+ * @return devuelve el salario bruto mensual en euros con dos decimales 
+ */
     public double getSalarioEsteMes(int horasExtra) {
         double cantidadExtra, salarioFinal;
         cantidadExtra = horasExtra * this.salarioBasePorHora * FACTOR_HORA_EXTRA;
